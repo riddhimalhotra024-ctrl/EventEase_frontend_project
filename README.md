@@ -47,11 +47,14 @@ This website allows users to browse events (movies, concerts, sports), view deta
 ### Event Cards
 ![Screenshot 2](2.png)
 
-### Booking Form
+### About
 ![Screenshot 3](3.png)
 
 ### Responsive View
 ![Screenshot 4](4.png)
 
+### Booking form
+![Screenshot 5](5.png)
+![Screenshot 6](6.png)
 ---
 
