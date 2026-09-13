@@ -1,0 +1,755 @@
+/* font, background, text colour */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color:#f8f9fa;
+  color: #000102;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+   color: #f8f9fa;  
+}
+h2{
+  color:#5f4a8b;
+}
+h1,h2 {
+  text-decoration: underline;
+}
+
+
+/* alignment and padding */
+header, footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #5f4a8b; /* iris background */
+  color: #f8f9fa;            /* butter text */
+}
+section, main {
+  text-align: center;
+  padding: 20px;
+  margin: 10px auto;
+  max-width: 900px;
+}
+
+
+
+/* event cards */
+.event-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px 0;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.event-card h3 {
+  margin: 0;
+  color: #222;
+}
+
+.event-card p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* buttons inside event cards */
+.event-card .book-btn {
+  background-color: #5f4a8b;   /* iris background */
+  color: #f8f9fa;              /* butter text */
+  border: 2px solid #000102;   /* visible dark border */
+  padding: 10px 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* shadow always visible */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-card .book-btn:hover {
+  transform: translateY(-2px); /* slight lift on hover */
+  box-shadow: 0 6px 10px rgba(0,0,0,0.25); /* deeper shadow on hover */
+  border-color: #f8f9fa;       /* butter border highlight on hover */
+}
+
+
+
+/* navigation bar and footer */
+nav {
+  background-color: #5f4a8b; /* iris background */
+  padding: 10px;
+}
+
+nav a {
+  color: #f8f9fa;            /* butter text */
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color:#f8f9fa;            /* lighter butter shade on hover */
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #5f4a8b; /* iris background */
+  color: #f8f9fa;            /* butter text */
+  padding: 15px;
+  text-align: center;
+}
+
+
+
+/*styling images as buttons*/
+.category-img {
+  width: 120px;
+  height: 120px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+.category-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 2px solid #5f4a8b;   /* iris border */
+  border-radius: 5px 0 0 5px;  /* rounded left side */
+  outline: none;
+  font-size: 1em;
+  background-color: #f8f9fa;   /* butter background */
+  color: #5f4a8b;              /* iris text */
+}
+
+.search-bar input::placeholder {
+  color: #5f4a8b;              /* placeholder in iris */
+  opacity: 0.7;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #5f4a8b;   /* iris background */
+  color: #f8f9fa;              /* butter text */
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;  /* rounded right side */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* shadow behind button */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-bar button:hover {
+  background-color: #4a3a6d;   /* darker iris on hover */
+  transform: translateY(-2px); /* slight lift */
+}
+
+/* Filters Section */
+.filters {
+  display: flex;
+  justify-content: space-between; /* spread evenly across row */
+  flex-wrap: wrap;                /* wrap on smaller screens */
+  gap: 15px;                      /* spacing between dropdowns */
+  margin: 20px auto;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.filters select {
+  flex: 1;                        /* equal width for all dropdowns */
+  min-width: 180px;               /* prevents shrinking too small */
+  padding: 10px 15px;
+  border: 2px solid #5f4a8b;      /* iris border */
+  border-radius: 5px;
+  background-color: #f8f9fa;      /* butter background */
+  color: #5f4a8b;                 /* iris text */
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15); /* shadow for depth */
+  transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.filters select:hover {
+  border-color: #4a3a6d;          /* darker iris on hover */
+  transform: translateY(-2px);    /* slight lift */
+}
+
+/* Featured Event Section */
+.featured-event {
+  text-align: center;
+  margin: 30px auto;
+  max-width: 600px; /* keeps section compact */
+}
+
+/* Poster Image */
+.featured-event img {
+  display: block;
+  margin: 0 auto 15px auto; /* centers image, adds space below */
+  width: 40%;               /* smaller size */
+  max-width: 300px;          /* limits width */
+  height: auto;
+  border-radius: 8px;        /* smooth corners */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25); /* soft shadow only */
+}
+
+/* Book Now Button */
+.event-card .book-btn {
+  background-color: #5f4a8b;   /* iris background */
+  color: #f8f9fa;              /* butter text */
+  border: 2px solid #f8f9fa;   /* butter border */
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.event-card .book-btn:hover {
+  background-color: #4a3a6d;   /* darker iris */
+  transform: translateY(-2px);
+}
+
+
+/* Testimonials Section */
+.testimonials {
+  background: none;        /* removes the outer butter box */
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.testimonials h2 {
+  color: #5f4a8b;          /* iris heading */
+  font-size: 2em;
+  margin-bottom: 30px;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Keep inner testimonial cards styled */
+.testimonial-card {
+  background: #fff;
+  border: 2px solid #5f4a8b; /* iris border */
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 600px;
+  box-shadow: 0 4px 6px rgba(95,74,139,0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(95,74,139,0.3);
+}
+
+.testimonial-card p {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.testimonial-card span {
+  color: #5f4a8b; /* iris text */
+  font-weight: bold;
+}
+
+
+/* About Section */
+.about {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Heading */
+.about h2 {
+  color: #5f4a8b; /* iris color */
+  font-size: 2em;
+  margin-bottom: 20px;
+
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Paragraphs */
+.about p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #333;
+  margin: 15px 0;
+}
+
+/* How It Works Section */
+.how-it-works {
+  max-width: 1000px;
+  margin: 60px auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.how-it-works h2 {
+  color: #5f4a8b; /* iris heading */
+  font-size: 2em;
+  margin-bottom: 40px;
+
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Steps Layout */
+.steps {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Individual Step */
+.step {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  padding: 20px;
+}
+
+.step .icon {
+  font-size: 2.5em;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.step h3 {
+  color: #5f4a8b; /* iris subheading */
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 1.1em;
+  color: #333;
+  line-height: 1.5;
+}
+
+/*faq section*/
+.faq {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.faq h2 {
+  color: #5f4a8b; /* iris heading */
+  font-size: 2em;
+  margin-bottom: 30px;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* FAQ items */
+details {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+/* Question styling */
+summary {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #5f4a8b;
+  cursor: pointer;
+  list-style: none; /* remove default marker */
+}
+
+/* Hide default arrow marker */
+summary::marker {
+  display: none;
+}
+
+/* Custom arrow */
+summary::after {
+  content: "▼";
+  float: right;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when open */
+details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+/* Answer text */
+details p {
+  font-size: 1em;
+  color: #333;
+  margin-top: 10px;
+}
+/*footer*/
+footer {
+  background-color: #5f4a8b; /* iris background */
+  color: #f8f9fa;            /* butter text */
+  padding: 20px;
+  text-align: center;
+  border-top: 3px solid #f8f9fa; /* butter border */
+}
+
+footer a {
+  color: #f8f9fa;            /* butter text */
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border: 2px solid #f8f9fa; /* butter border */
+  border-radius: 25px;       /* pill shape */
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  background-color: #f8f9fa; /* butter background */
+  color: #5f4a8b;            /* iris text */
+  box-shadow: 0 4px 8px rgba(95,74,139,0.3);
+}
+
+/*movie button*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  overflow-y: auto;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 900px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #5f4a8b;
+}
+
+.movie-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px 0;
+  background-color: #fefefe;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.movie-info {
+  max-width: 70%;
+}
+
+.movie-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.details-btn, .book-btn {
+  background-color: #5f4a8b;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.details-btn:hover, .book-btn:hover {
+  background-color: #7a63a8;
+}
+
+/*sport button*/
+.sports-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px 0;
+  background-color: #fefefe;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sports-info {
+  max-width: 70%;
+}
+
+.sports-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.details-btn, .book-btn {
+  background-color: #5f4a8b;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.details-btn:hover, .book-btn:hover {
+  background-color: #7a63a8;
+}
+/*concert*/
+.concert-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px 0;
+  background-color: #fefefe;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.concert-info {
+  max-width: 70%;
+}
+
+.concert-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/*lounge*/
+.lounge-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px 0;
+  background-color: #fff8f5; /* warm cozy tone */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.lounge-info {
+  max-width: 70%;
+}
+
+.lounge-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/*comedy*/
+.comedy-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px 0;
+  background-color: #fffdf7; /* light fun tone */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.comedy-info {
+  max-width: 70%;
+}
+
+.comedy-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/*button pressed look*/
+.book-btn:active {
+  transform: scale(0.95);
+  background-color: #4a3a6d; /* darker iris */
+  color: #fff;
+}
+
+/* Book Now Popup Form Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+/* Show when targeted */
+.modal:target {
+  display: block;
+}
+
+/* Modal box */
+.modal-content {
+  background: #fff;
+  margin: 5% auto;
+  padding: 30px;
+  width: 650px;       /* broader width */
+  max-width: 90%;     /* responsive on smaller screens */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Title */
+.modal-title {
+  color: #5f4a8b; /* soft purple accent */
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Form groups */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #5f4a8b;
+  outline: none;
+}
+
+/* Confirm button */
+.confirm-btn {
+  width: 100%;
+  padding: 14px;
+  background: #5f4a8b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.confirm-btn:hover {
+  background: #4a3a6d;
+}
+
+/* Close button */
+.close {
+  float: right;
+  text-decoration: none;
+  font-size: 26px;
+  color: #999;
+}
+
+.close:hover {
+  color: #333;
+}
+
+/* Responsive Layout */
+
+/* Mobile (up to 600px) */
+@media (max-width: 600px) {
+  .container, .modal-content, .event-card {
+    width: 95%;
+    padding: 15px;
+  }
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  .event-card {
+    margin-bottom: 20px;
+  }
+}
+
+/* Tablet (601px–900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .container, .modal-content, .event-card {
+    width: 85%;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Desktop (above 900px) */
+@media (min-width: 901px) {
+  .container {
+    width: 1200px;
+    margin: auto;
+  }
+  .modal-content {
+    width: 700px; /* broader popup form */
+  }
+  .event-card {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 2%;
+  }
+}
+/*website logo*/
+.logo-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.eventease-logo {
+  width: 120px;       /* small icon size */
+  height: auto;
+  opacity: 0.95;
+  transition: transform 0.3s ease;
+}
+
+.eventease-logo:hover {
+  transform: scale(1.05); /* subtle hover effect */
+}
